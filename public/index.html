@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>chat-app</title>
+</head>
+
+<body>
+    <aside class="aside hidden">
+        <div class="open-rooms">
+            <h2>Open Rooms</h2>
+            <ul id="openRooms">
+                <!-- Open Rooms -->
+            </ul>
+        </div>
+        <div class="locked-rooms">
+            <h2>Locked Rooms</h2>
+            <ul id="lockedRooms">
+                <!-- Locked Rooms -->
+            </ul>
+        </div>
+    </aside>    
+
+    </aside>
+    <main>
+        <div class="join-lobby">
+            <div class="welcome">
+                <h1>Welcome</h1>
+                <h3>Enter your nic and go to the Lobby!</h3>
+            </div>
+            <form class="nic-name">
+                <input id="name" type="text" placeholder="Enter your nic">
+                <button>To Lobby</button>
+            </form>
+        </div>
+        <div class="join-room hidden">
+            <div class="welcome-lobby">
+                <!-- Welcome -->
+            </div>
+            <form class="join">
+            <input id="room" type="text" placeholder="Enter a room">
+            <label for="checkbox">Use password?</label>
+            <input type="checkbox" name="checkbox" id="checkbox" onclick="usePassword()">
+            <input id="password" class="password hidden" type="password" placeholder="enter the password">
+            <label name="password" id="password" for="password">Show password</label>
+              <input type="checkbox" class="password"
+                onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+                <button>Join Room</button>
+            </form>
+        </div>
+
+        <div class="chat hidden">
+            <ul>
+                <!-- Messages from users -->
+            </ul>
+            <form class="chat-room">
+                <input id="message" type="text" placeholder="Type your message">
+                <button id="send_message">Send</button>
+            </form>
+            <form class="chat-leave">
+                <button id="leave">Leave Chat</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
