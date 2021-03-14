@@ -12,5 +12,6 @@ You need to have the following installed
 
 ## How to run the program
 
-npm install
-npm start
+Run in root folder of project:
+1. npm install
+2. npm start
