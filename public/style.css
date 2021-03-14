@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: rgb(7, 77, 82);
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  background-color: rgb(250, 239, 225);
+}
+
+button {
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgb(12, 129, 138);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.join-lobby {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(4, 45, 49);
+  padding: 5rem;
+  border-radius: 0.5rem;
+}
+
+.join-room {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(4, 45, 49);
+  padding: 5rem;
+  border-radius: 0.5rem;
+}
+
+.chat-leave {
+  margin: 4rem 0;
+}
+
+#leave {
+  background-color: rgb(114, 144, 148);
+  color: white;
+}
+
+#errorMessage {
+  margin-top: 15px;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat ul {
+  margin: 5rem 0;
+  padding: 0;
+  flex: 1;
+  width: 100%;
+}
+
+.chat li {
+  list-style: none;
+  color: rgb(49, 55, 97);
+  background-color: rgb(204, 247, 250);
+  padding: 0.7rem;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sidebar */
+
+aside {
+  background: rgb(12, 129, 138);
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+aside ul {
+  padding: 0;
+}
+
+aside li {
+  list-style: none;
+  font-size: 1rem;
+  background: none;
+  font-family: arial;
+  color: white;
+  cursor: pointer;
+  align-self: center;
+}
+
+h2 {
+  font-family: arial;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}
+
+.welcome,
+.welcome-lobby {
+  text-align: center;
+  font-family: arial;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+label {
+  color: white;
+}

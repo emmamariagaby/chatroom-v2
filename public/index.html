@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./index.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>chat-app</title>
+    <title>ChatRoom-v2</title>
 </head>
 
 <body>
@@ -47,27 +47,25 @@
             <input id="room" type="text" placeholder="Enter a room">
             <label for="checkbox">Use password?</label>
             <input type="checkbox" name="checkbox" id="checkbox" onclick="usePassword()">
-            <input id="password" class="password hidden" type="password" placeholder="enter the password">
-            <label name="password" id="password" for="password">Show password</label>
+            <input id="password" class="password hidden" type="password" placeholder="Enter the password">
+            <label name="password" id="passwordLabel" for="password">Show password</label>
               <input type="checkbox" class="password"
                 onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
                 <button>Join Room</button>
+                <label id="errorMessage"></label>
             </form>
         </div>
 
         <div class="chat hidden">
-            <ul>
+            <ul id="messages">
                 <!-- Messages from users -->
             </ul>
             <form class="chat-room">
                 <input id="message" type="text" placeholder="Type your message">
                 <button id="send_message">Send</button>
             </form>
-            <form class="chat-leave">
-                <button id="leave">Leave Chat</button>
-            </form>
+            <button class="chat-leave" id="leave">Leave Chat</button>            
         </div>
     </main>
 </body>
-
 </html>
